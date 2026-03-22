@@ -531,8 +531,8 @@ function App() {
   const rdData = t.rdData.map((r, i) => ({ ...r, icon: rdIcons[i] }));
 
   const certImages = [
-    "/certificates/Temel Roketçilik e-Kitabı.jpg",
-    "/certificates/Yapay Zekâ Farkındalığı Eğitimi.jpg",
+    "/certificates/Temel Roketçilik e-Kitabı.jpg",
+    "/certificates/Yapay Zekâ Farkındalığı Eğitimi.jpg",
     "/certificates/milliyetkinlikhamlesi.jpg",
     "/certificates/Garanti_teknolojiSerisi.jpg",
     "/certificates/Garanti_GenAi.jpg",
@@ -822,10 +822,10 @@ function App() {
         </div>
         <div style={styles.contactButtons}>
           {[
-            { label: "GitHub", href: "https://github.com/leylaerdemir", icon: <FaGithub size={18} /> },
-            { label: "Kaggle", href: "https://www.kaggle.com/leylaerdemir", icon: <SiKaggle size={18} /> },
-            { label: "LinkedIn", href: "https://www.linkedin.com/in/leyla-erdemir-a37082394/", icon: <FaLinkedin size={18} /> },
-          ].map(({ label, href, icon }) => (
+            { label: "GitHub", href: "https://github.com/leylaerdemir" },
+            { label: "Kaggle", href: "https://www.kaggle.com/leylaerdemir" },
+            { label: "LinkedIn", href: "https://www.linkedin.com/in/leyla-erdemir-a37082394/" },
+          ].map(({ label, href }) => (
             <a
               key={label}
               href={href}
@@ -833,20 +833,17 @@ function App() {
               rel="noreferrer"
               style={styles.contactBtn}
               onMouseEnter={(e) => {
-                e.currentTarget.style.background = "#22d3ee";
-                e.currentTarget.style.color = "#030712";
-                e.currentTarget.style.boxShadow = "0 0 25px #22d3ee";
+                e.target.style.background = "#22d3ee";
+                e.target.style.color = "#030712";
+                e.target.style.boxShadow = "0 0 25px #22d3ee";
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.background = "#0b1a2a";
-                e.currentTarget.style.color = "#e5e7eb";
-                e.currentTarget.style.boxShadow = "none";
+                e.target.style.background = "#0b1a2a";
+                e.target.style.color = "#e5e7eb";
+                e.target.style.boxShadow = "none";
               }}
             >
-              <span style={{ display: "flex", alignItems: "center", gap: "10px", pointerEvents: "none" }}>
-                {icon}
-                {label}
-              </span>
+              {label}
             </a>
           ))}
         </div>
