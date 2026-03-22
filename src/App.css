@@ -1,6 +1,6 @@
 /* ─── RESET ─── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
- 
+
 /* ─── NAVBAR ─── */
 .nav {
   position: fixed; top: 0; left: 0; width: 100%;
@@ -29,7 +29,7 @@
 }
 .lang-btn:hover { color: #e5e7eb; }
 .lang-btn.active { background: #22d3ee; color: #030712; font-weight: bold; }
- 
+
 /* hamburger — hidden desktop */
 .hamburger {
   display: none; background: none; border: none;
@@ -49,24 +49,24 @@
   border-bottom: 1px solid #0f1929; transition: color 0.2s;
 }
 .mobile-menu a:hover { color: #22d3ee; }
- 
+
 /* ─── HERO ─── */
 .hero-title  { font-size: 52px; margin-top: 20px; }
 .hero-subtitle { color: #22d3ee; font-size: 20px; margin-top: 6px; }
 .hero-desc { color: #9ca3af; margin-top: 10px; line-height: 1.6; font-size: 15px; }
- 
+
 /* ─── CARDS ROW ─── */
 .cards-row {
   display: flex; justify-content: center;
   gap: 20px; width: 100%; flex-wrap: wrap;
 }
- 
+
 /* ─── SECTION TITLES ─── */
 .section-title {
   font-size: 28px; letter-spacing: 3px; color: #22d3ee; margin-bottom: 32px;
   text-align: center;
 }
- 
+
 /* ─── CONTACT BUTTONS ─── */
 .contact-btn {
   padding: 14px 30px; border-radius: 14px; border: 1px solid #1f2937;
@@ -76,7 +76,7 @@
 }
 .contact-btn:hover { background: #22d3ee; color: #030712; box-shadow: 0 0 25px #22d3ee; }
 .contact-buttons-wrap { display: flex; gap: 16px; margin-top: 20px; flex-wrap: wrap; justify-content: center; }
- 
+
 /* ══════════════════════════════
    TABLET  ≤ 900px
 ══════════════════════════════ */
@@ -86,7 +86,7 @@
   .nav-link { font-size: 13px; }
   .hero-title { font-size: 40px; }
 }
- 
+
 /* ══════════════════════════════
    MOBILE  ≤ 768px
 ══════════════════════════════ */
@@ -99,23 +99,23 @@
   .icon-box { width: 32px; height: 32px; }
   .lang-btn { padding: 4px 6px; font-size: 11px; }
   .lang-container { margin-left: 2px; }
- 
+
   /* Hero */
   .hero-title { font-size: 30px; }
   .hero-subtitle { font-size: 15px; }
   .hero-desc { font-size: 13px; padding: 0 8px; }
- 
+
   /* Cards: single column, contained width */
   .cards-row { flex-direction: column; align-items: center; }
- 
+
   /* Section title smaller */
   .section-title { font-size: 20px; letter-spacing: 2px; }
- 
+
   /* Contact buttons: stack */
   .contact-buttons-wrap { flex-direction: column; align-items: center; gap: 10px; }
   .contact-btn { width: 100%; max-width: 300px; justify-content: center; padding: 13px 20px; font-size: 14px; }
 }
- 
+
 /* ══════════════════════════════
    SMALL  ≤ 480px
 ══════════════════════════════ */
