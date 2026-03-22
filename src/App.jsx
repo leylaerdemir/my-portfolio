@@ -531,8 +531,8 @@ function App() {
   const rdData = t.rdData.map((r, i) => ({ ...r, icon: rdIcons[i] }));
 
   const certImages = [
-    "/certificates/Temel Roketçilik e-Kitabı.jpg",
-    "/certificates/Yapay Zekâ Farkındalığı Eğitimi.jpg",
+    "/certificates/Temel Roketçilik e-Kitabı.jpg",
+    "/certificates/Yapay Zekâ Farkındalığı Eğitimi.jpg",
     "/certificates/milliyetkinlikhamlesi.jpg",
     "/certificates/Garanti_teknolojiSerisi.jpg",
     "/certificates/Garanti_GenAi.jpg",
