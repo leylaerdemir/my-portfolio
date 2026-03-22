@@ -1,3 +1,4 @@
+import "./App.css";
 import { FaGithub, FaLinkedin, FaRobot, FaFlask, FaCode, FaChartLine, FaBolt, FaSearchPlus, FaDatabase, FaPlug, FaServer, FaEye } from "react-icons/fa";
 import { SiKaggle } from "react-icons/si";
 import {
