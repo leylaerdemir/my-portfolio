@@ -1,7 +1,5 @@
-/* ─── RESET ─── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-/* ─── NAVBAR ─── */
 .nav {
   position: fixed; top: 0; left: 0; width: 100%;
   display: flex; justify-content: space-between; align-items: center;
@@ -30,12 +28,11 @@
 .lang-btn:hover { color: #e5e7eb; }
 .lang-btn.active { background: #22d3ee; color: #030712; font-weight: bold; }
 
-/* hamburger — hidden desktop */
+/* hamburger â€” hidden desktop */
 .hamburger {
   display: none; background: none; border: none;
   cursor: pointer; padding: 4px; align-items: center; justify-content: center;
 }
-/* mobile drawer */
 .mobile-menu {
   display: none; flex-direction: column;
   position: fixed; top: 65px; left: 0; width: 100%;
@@ -50,38 +47,35 @@
 }
 .mobile-menu a:hover { color: #22d3ee; }
 
-/* ─── HERO ─── */
+/* â”€â”€â”€ HERO â”€â”€â”€ */
 .hero-title  { font-size: 56px; margin-top: 20px; font-weight: 700; }
 .hero-subtitle { color: #22d3ee; font-size: 22px; margin-top: 8px; }
 .hero-desc { color: #9ca3af; margin-top: 12px; line-height: 1.65; font-size: 16px; }
 
-/* ─── SECTION TITLE ─── */
 .section-title {
   font-size: 30px; letter-spacing: 3px; color: #22d3ee;
   margin-bottom: 32px; text-align: center;
 }
 
-/* ─── CARDS ROW ─── */
 .cards-row {
   display: flex; justify-content: center;
   gap: 20px; width: 100%; flex-wrap: wrap;
 }
 
-/* ─── TECH GRID ─── */
+/* Tech grid â€” desktop: 7 col */
 .tech-grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: 14px;
 }
 
-/* ─── CERT GRID ─── */
+/* Cert grid â€” desktop: auto */
 .cert-grid {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
   gap: 14px;
 }
 
-/* ─── CONTACT BUTTONS ─── */
 .contact-btn {
   padding: 14px 30px; border-radius: 14px; border: 1px solid #1f2937;
   background: #0b1a2a; color: #e5e7eb; font-size: 16px; cursor: pointer;
@@ -91,46 +85,43 @@
 .contact-btn:hover { background: #22d3ee; color: #030712; box-shadow: 0 0 25px #22d3ee; }
 .contact-buttons-wrap { display: flex; gap: 16px; margin-top: 20px; flex-wrap: wrap; justify-content: center; }
 
-/* ══════════════════════════════
-   TABLET  ≤ 900px
-══════════════════════════════ */
+/* â”€â”€ MOBILE NAV: hamburger left, icons center, lang right â”€â”€ */
+.mobile-nav-left  { display: none; align-items: center; gap: 8px; }
+.mobile-nav-right { display: none; align-items: center; }
+
 @media (max-width: 900px) {
   .nav { padding: 14px 24px; }
   .nav-menu { gap: 16px; }
   .nav-link { font-size: 13px; }
   .hero-title { font-size: 44px; }
   .section-title { font-size: 24px; }
+  .tech-grid { grid-template-columns: repeat(4, 1fr); }
 }
 
-/* ══════════════════════════════
-   MOBILE  ≤ 768px
-══════════════════════════════ */
 @media (max-width: 768px) {
-  .nav { padding: 12px 16px; }
+  .nav { padding: 12px 14px; }
   .nav-menu { display: none; }
-  .hamburger { display: flex; }
-  .nav-right { gap: 6px; }
+
+  /* Hide old right group */
+  .nav-right { display: none; }
+
+  /* Show mobile nav groups */
+  .mobile-nav-left  { display: flex; }
+  .mobile-nav-right { display: flex; }
+
   .icon-box { width: 32px; height: 32px; }
   .lang-btn { padding: 4px 6px; font-size: 11px; }
-  .lang-container { margin-left: 2px; }
 
   .hero-title { font-size: 30px; }
   .hero-subtitle { font-size: 16px; }
   .hero-desc { font-size: 14px; padding: 0 8px; }
-
   .section-title { font-size: 18px; letter-spacing: 2px; margin-bottom: 20px; }
 
-  /* Tech grid: 3 columns on mobile */
-  .tech-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
-  }
+  /* Tech grid: 3 columns â€” fits screen */
+  .tech-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
 
-  /* Cert grid: 3 columns on mobile */
-  .cert-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
-  }
+  /* Cert grid: 3 columns */
+  .cert-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
 
   .cards-row { flex-direction: column; align-items: center; }
 
@@ -138,9 +129,6 @@
   .contact-btn { width: 100%; max-width: 300px; justify-content: center; padding: 13px 20px; font-size: 14px; }
 }
 
-/* ══════════════════════════════
-   SMALL  ≤ 480px
-══════════════════════════════ */
 @media (max-width: 480px) {
   .hero-title { font-size: 26px; }
   .hero-subtitle { font-size: 14px; }
