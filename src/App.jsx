@@ -45,7 +45,7 @@ const T = {
       { title:"Embedded & Real-Time Systems", desc:"Exploring embedded systems, real-time processing, and hardware-integrated AI solutions for high-performance environments." },
     ],
     certs: [
-      { short:"Temel Roketçilik e-Kitabı", institution:"T.C. Presidency of Defense Industries — Defense Industries Academy", takeaway:"I completed the Basic Rocketry e-Book training within the Career Development Module and National Competency Initiative." },
+      { short:"Basic Rocketry e-Book", institution:"T.C. Presidency of Defense Industries — Defense Industries Academy", takeaway:"I completed the Basic Rocketry e-Book training within the Career Development Module and National Competency Initiative." },
       { short:"AI Awareness Training", institution:"T.C. Presidency of Defense Industries — Defense Industries Academy", takeaway:"Through AI awareness training, I learned fundamental concepts and took an important step toward strengthening my competencies." },
       { short:"Career & Competency Meetings", institution:"Defense Industries Academy — National Competency Initiative", takeaway:"Gained current perspectives on career and competency in the defense industry ecosystem." },
       { short:"GenAI — Technology Series", institution:"Garanti BBVA Genç — New Generation Career School", takeaway:"Completed all modules of the technology-focused training series held on December 17–19." },
@@ -161,8 +161,8 @@ const PROJ_GH = [
 ];
 const RD_ICONS = ["🧠","🤖","🧪"];
 const CERT_IMGS = [
-  "/certificates/Temel Roketçilik e-Kitabi.jpg",
-  "/certificates/Yapay Zeka Farkındalığı Eğitimi.jpg",
+  "/certificates/Temel Roketçilik e-Kitabı.jpg",
+  "/certificates/Yapay Zekâ Farkındalığı Eğitimi.jpg",
   "/certificates/milliyetkinlikhamlesi.jpg",
   "/certificates/Garanti_teknolojiSerisi.jpg",
   "/certificates/Garanti_GenAi.jpg",
