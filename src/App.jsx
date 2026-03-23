@@ -282,8 +282,8 @@ export default function App() {
           {TECH_STACK.map(({ n, c, I }) => (
             <div key={n} style={{ background:"#0b1a2a", borderRadius:"14px", border:"1px solid #1f2937", padding:"16px 10px", display:"flex", flexDirection:"column", alignItems:"center", gap:"8px" }}>
               <I size={30} color="#22d3ee"/>
-              <span style={{ fontSize:"13px", fontWeight:"700", color:"#e5e7eb", textAlign:"center" }}>{n}</span>
-              <span style={{ fontSize:"10px", color:"#64748b", textAlign:"center" }}>{c}</span>
+              <span style={{ fontSize:"15px", fontWeight:"700", color:"#e5e7eb", textAlign:"center" }}>{n}</span>
+              <span style={{ fontSize:"12px", color:"#64748b", textAlign:"center" }}>{c}</span>
             </div>
           ))}
         </div>
@@ -382,7 +382,7 @@ export default function App() {
                 <span key={i} style={{ padding:"5px 12px", border:"1px solid #22d3ee", borderRadius:"999px", fontSize:"12px", color:"#22d3ee" }}>{tech}</span>
               ))}
             </div>
-            <p style={{ color:"#9ca3af", lineHeight:"1.6", fontSize:"14px" }}>{selProj.detail}</p>
+            <p style={{ color:"#9ca3af", lineHeight:"1.6", fontSize:"15px" }}>{selProj.detail}</p>
             <p style={{ color:"#22d3ee", marginTop:"10px", fontWeight:"500", fontSize:"14px" }}>{selProj.impact}</p>
             <div style={{ display:"flex", gap:"8px", flexWrap:"wrap", marginTop:"14px" }}>
               {selProj.tags?.map((tag, i) => (
