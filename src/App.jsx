@@ -345,7 +345,7 @@ export default function App() {
       </div>
 
       {/* ── CONTACT ── */}
-      <div ref={refs.contact} style={{ minHeight:"80vh", display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center", textAlign:"center", padding:"40px 20px" }}>
+      <div ref={refs.contact} style={{ height:"100vh", display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center", textAlign:"center", padding:"40px 20px" }}>
         <h2 className="section-title">{t.contactTitle}</h2>
         <p style={{ color:"#9ca3af", fontSize:"16px", marginBottom:"20px" }}>{t.contactIntro}</p>
         <div style={{ display:"flex", flexDirection:"column", gap:"8px", marginBottom:"24px" }}>
