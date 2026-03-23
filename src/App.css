@@ -103,7 +103,7 @@
   .nav-menu { display: none; }
 
   /* Hide old right group */
-  .nav-right { display: none; }
+  .nav-right { display: none !important; }
 
   /* Show mobile nav groups */
   .mobile-nav-left  { display: flex; }

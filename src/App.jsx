@@ -239,21 +239,35 @@ export default function App() {
             <a key={label} className="nav-link" onClick={() => go(ref)}>{label}</a>
           ))}
         </div>
+       {/* Desktop sağ */}
         <div className="nav-right">
           <a href="https://www.kaggle.com/leylaerdemir" target="_blank" rel="noreferrer" className="icon-box"><SiKaggle size={16}/></a>
-          <a href="https://github.com/leylaerdemir"     target="_blank" rel="noreferrer" className="icon-box"><FaGithub size={16}/></a>
+          <a href="https://github.com/leylaerdemir" target="_blank" rel="noreferrer" className="icon-box"><FaGithub size={16}/></a>
           <a href="https://www.linkedin.com/in/leyla-erdemir-a37082394/" target="_blank" rel="noreferrer" className="icon-box"><FaLinkedin size={16}/></a>
           <div className="lang-container">
             {["EN","TR","DE"].map(l => (
               <button key={l} className={`lang-btn${lang===l?" active":""}`} onClick={() => setLang(l)}>{l}</button>
             ))}
           </div>
-          {/* hamburger */}
-          <button className="hamburger" onClick={() => setMenuOpen(o => !o)} aria-label="menu">
-            {menuOpen
-              ? <IoClose size={22} color="#d1d5db"/>
-              : <GiHamburgerMenu size={20} color="#d1d5db"/>}
+        </div>
+
+        {/* Mobile sol: hamburger + ikonlar */}
+        <div className="mobile-nav-left">
+          <button className="hamburger" style={{display:"flex"}} onClick={() => setMenuOpen(o => !o)} aria-label="menu">
+            {menuOpen ? <IoClose size={22} color="#d1d5db"/> : <GiHamburgerMenu size={20} color="#d1d5db"/>}
           </button>
+          <a href="https://www.kaggle.com/leylaerdemir" target="_blank" rel="noreferrer" className="icon-box"><SiKaggle size={15}/></a>
+          <a href="https://github.com/leylaerdemir" target="_blank" rel="noreferrer" className="icon-box"><FaGithub size={15}/></a>
+          <a href="https://www.linkedin.com/in/leyla-erdemir-a37082394/" target="_blank" rel="noreferrer" className="icon-box"><FaLinkedin size={15}/></a>
+        </div>
+
+        {/* Mobile sağ: dil seçici */}
+        <div className="mobile-nav-right">
+          <div className="lang-container">
+            {["EN","TR","DE"].map(l => (
+              <button key={l} className={`lang-btn${lang===l?" active":""}`} onClick={() => setLang(l)}>{l}</button>
+            ))}
+          </div>
         </div>
       </nav>
 
