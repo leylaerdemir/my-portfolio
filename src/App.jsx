@@ -265,7 +265,7 @@ export default function App() {
       </div>
 
       {/* ── HERO ── */}
-      <div ref={refs.home} style={{ minHeight:"80vh", display:"flex", alignItems:"center", justifyContent:"center", paddingTop:"80px" }}>
+      <div ref={refs.home} style={{ height:"100vh", display:"flex", alignItems:"center", justifyContent:"center" }}>
         <div style={{ textAlign:"center", maxWidth:"680px", padding:"0 20px" }}>
           <img src="/profile.jpg" alt="profile" style={{ width:"160px", height:"160px", objectFit:"cover", borderRadius:"50%", margin:"0 auto", border:"4px solid #22d3ee", boxShadow:"0 0 25px rgba(34,211,238,0.35)", display:"block" }}/>
           <h1 className="hero-title">Leyla Erdemir</h1>
