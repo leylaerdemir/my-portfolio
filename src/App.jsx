@@ -161,8 +161,8 @@ const PROJ_GH = [
 ];
 const RD_ICONS = ["🧠","🤖","🧪"];
 const CERT_IMGS = [
-  "/certificates/Temel Roketcilik e-Kitabi.jpg",
-  "/certificates/Yapay Zeka Farkindaligi Egitimi.jpg",
+  "/certificates/Temel Roketçilik e-Kitabi.jpg",
+  "/certificates/Yapay Zeka Farkındalığı Eğitimi.jpg",
   "/certificates/milliyetkinlikhamlesi.jpg",
   "/certificates/Garanti_teknolojiSerisi.jpg",
   "/certificates/Garanti_GenAi.jpg",
