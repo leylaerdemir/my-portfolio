@@ -289,7 +289,7 @@ export default function App() {
       </div>
 
       {/* ── TECH STACK ── */}
-      <div ref={refs.tech} style={{ paddingTop:"60px", paddingBottom:"40px", textAlign:"center", maxWidth:"1100px", margin:"0 auto", padding:"60px 20px 40px" }}>
+      <div ref={refs.tech} style={{ paddingTop:"60px", paddingBottom:"40px", textAlign:"center", maxWidth:"1100px", margin:"0 auto", padding:"60px 16px 40px" }}>
         <h2 className="section-title">{t.techTitle}</h2>
         <p style={{ color:"#9ca3af", fontSize:"14px", lineHeight:"1.65", maxWidth:"680px", margin:"0 auto 36px" }}>{t.techIntro}</p>
         <div style={{ display:"grid", gridTemplateColumns:"repeat(7, 1fr)", gap:"14px" }}>
