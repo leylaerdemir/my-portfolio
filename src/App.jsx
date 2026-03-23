@@ -437,7 +437,7 @@ const S = {
   card: { background:"#0b1a2a", borderRadius:"18px", padding:"26px 20px", width:"300px", minHeight:"320px", display:"flex", flexDirection:"column", justifyContent:"space-between", alignItems:"center", transition:"all 0.3s ease", cursor:"pointer" },
   cardBody: { display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"center", flex:1, width:"100%" },
   cardTitle: { fontSize:"19px", fontWeight:"700", color:"#e5e7eb", textAlign:"center", margin:"8px 0", lineHeight:"1.3", minHeight:"52px", display:"flex", alignItems:"center", justifyContent:"center" },
-  cardText: { fontSize:"13px", color:"#9ca3af", textAlign:"center", lineHeight:"1.6", marginTop:"8px" },
+  cardText: { fontSize:"15px", color:"#9ca3af", textAlign:"center", lineHeight:"1.6", marginTop:"8px" },
   btn: { marginTop:"16px", color:"#22d3ee", cursor:"pointer", fontSize:"13px" },
   overlay: { position:"fixed", top:0, left:0, width:"100%", height:"100%", background:"rgba(0,0,0,0.75)", display:"flex", justifyContent:"center", alignItems:"center", zIndex:2000, padding:"16px" },
   modal: { background:"#0a0f1c", padding:"28px", borderRadius:"18px", border:"1px solid #1f2937", width:"100%", maxWidth:"500px", maxHeight:"90vh", overflowY:"auto", boxShadow:"0 0 40px rgba(34,211,238,0.2)" },
