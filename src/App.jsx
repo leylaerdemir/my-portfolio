@@ -9,11 +9,10 @@ import { SiKaggle } from "react-icons/si";
 import {
   SiPython, SiTensorflow, SiScikitlearn, SiLangchain, SiDocker,
   SiReact, SiHtml5, SiCss, SiJavascript, SiMysql, SiPhp, SiSqlite,
-  SiFastapi, SiGit, SiGithub, SiCplusplus,
+  SiFastapi, SiGit, SiGithub, SiCplusplus, SiTypescript, SiPostgresql, SiLinux,
 } from "react-icons/si";
 import { useRef, useEffect, useState } from "react";
 
-/* ─── TRANSLATIONS ─── */
 const T = {
   EN: {
     nav: { home:"Home", tech:"Tech Stack", projects:"Projects", ai:"AI & Systems", certs:"Certificates", contact:"Contact" },
@@ -51,9 +50,9 @@ const T = {
       { short:"GenAI — Technology Series", institution:"Garanti BBVA Genç — New Generation Career School", takeaway:"Completed all modules of the technology-focused training series held on December 17–19." },
       { short:"Technology Series-GenAI", institution:"Garanti BBVA Genç — New Generation Career School", takeaway:"Developed core GenAI competencies and perspective on current applications." },
       { short:"Basic Machine Learning", institution:"Garanti BBVA Genç — New Generation Career School", takeaway:"Consolidated ML fundamentals and built a stronger foundation for data science and AI projects." },
-      { short:"Think Tech", institution:"Coderspace", takeaway:"Attended the Think Tech event on December 11–12, 2025, following latest developments in the tech world." },
-      { short:"Women in Tech", institution:"Coderspace", takeaway:"Attended Women in Tech: Inspiring Women Stories on March 10–11, 2026, increasing awareness of diversity and inclusion." },
-      { short:"CODE GENIUS", institution:"TalentCoders.co — CODE GENIUS", takeaway:"Participated in CODE GENIUS where experts from leading tech companies met students; certificate TC55189FC22." },
+      { short:"Think Tech", institution:"Coderspace", takeaway:"Attended the Think Tech event on December 11–12, 2025." },
+      { short:"Women in Tech", institution:"Coderspace", takeaway:"Attended Women in Tech: Inspiring Women Stories on March 10–11, 2026." },
+      { short:"CODE GENIUS", institution:"TalentCoders.co — CODE GENIUS", takeaway:"Participated in CODE GENIUS; certificate TC55189FC22." },
     ],
   },
   TR: {
@@ -88,20 +87,20 @@ const T = {
     certs: [
       { short:"Temel Roketçilik e-Kitabı", institution:"T.C. Cumhurbaşkanlığı Savunma Sanayii Başkanlığı — Savunma Sanayii Akademisi", takeaway:"Kariyer Gelişim Modülü ve Milli Yetkinlik Hamlesi çerçevesindeki Temel Roketçilik e-Kitabı eğitimini tamamladım." },
       { short:"Yapay Zeka Farkındalığı", institution:"T.C. Cumhurbaşkanlığı Savunma Sanayii Başkanlığı — Savunma Sanayii Akademisi", takeaway:"Yapay zekâ farkındalığı eğitimiyle temel kavramları öğrenerek yetkinliklerimi güçlendirdim." },
-      { short:"Kariyer & Yetkinlik Buluşmaları", institution:"Savunma Sanayii Akademisi — Milli Yetkinlik Hamlesi", takeaway:"Milli Yetkinlik Hamlesi kapsamındaki Kariyer ve Yetkinlik Buluşmaları'na katılarak savunma sanayii ekosisteminde güncel perspektifler edindim." },
+      { short:"Kariyer & Yetkinlik Buluşmaları", institution:"Savunma Sanayii Akademisi — Milli Yetkinlik Hamlesi", takeaway:"Milli Yetkinlik Hamlesi kapsamındaki buluşmalara katılarak savunma sanayii ekosisteminde güncel perspektifler edindim." },
       { short:"GenAI — Teknoloji Serisi", institution:"Garanti BBVA Genç — Yeni Nesil Kariyer Okulu", takeaway:"17–19 Aralık'ta gerçekleşen teknoloji odaklı eğitim serisinin tüm modüllerini tamamladım." },
       { short:"Teknoloji Serisi-GenAI", institution:"Garanti BBVA Genç — Yeni Nesil Kariyer Okulu", takeaway:"GenAI eğitimine katılarak bu alandaki temel yetkinliklerimi geliştirdim." },
       { short:"Temel Makine Öğrenmesi", institution:"Garanti BBVA Genç — Yeni Nesil Kariyer Okulu", takeaway:"Temel Makine Öğrenmesi eğitimiyle ML prensiplerini pekiştirdim." },
-      { short:"Think Tech", institution:"Coderspace", takeaway:"11–12 Aralık 2025'te düzenlenen Think Tech etkinliğine katılarak teknoloji dünyasındaki güncel gelişmeleri takip ettim." },
-      { short:"Women in Tech", institution:"Coderspace", takeaway:"10–11 Mart 2026 tarihlerinde Women in Tech etkinliğinde ilham verici kadın hikâyelerini dinleyerek çeşitlilik farkındalığımı artırdım." },
-      { short:"CODE GENIUS", institution:"TalentCoders.co — CODE GENIUS", takeaway:"CODE GENIUS etkinliğine katılarak kod ve iş birliği odaklı ortamda deneyim kazandım; sertifika: TC55189FC22." },
+      { short:"Think Tech", institution:"Coderspace", takeaway:"11–12 Aralık 2025'te düzenlenen Think Tech etkinliğine katıldım." },
+      { short:"Women in Tech", institution:"Coderspace", takeaway:"10–11 Mart 2026 tarihlerinde Women in Tech etkinliğine katıldım." },
+      { short:"CODE GENIUS", institution:"TalentCoders.co — CODE GENIUS", takeaway:"CODE GENIUS etkinliğine katıldım; sertifika: TC55189FC22." },
     ],
   },
   DE: {
     nav: { home:"Startseite", tech:"Tech-Stack", projects:"Projekte", ai:"KI & Systeme", certs:"Zertifikate", contact:"Kontakt" },
     hero: {
       sub: "Software-Engineering-Studentin | KI & Web",
-      desc: "Ich entwickle intelligente digitale Lösungen an der Schnittstelle von KI und realem Nutzen. Angetrieben von einer Leidenschaft für Gesundheitstechnologien und moderne Websysteme verwandle ich komplexe Probleme in skalierbare Innovationen.",
+      desc: "Ich entwickle intelligente digitale Lösungen an der Schnittstelle von KI und realem Nutzen. Angetrieben von einer Leidenschaft für Gesundheitstechnologien verwandle ich komplexe Probleme in skalierbare, nutzerzentrierte Innovationen.",
     },
     techTitle: "TECH-STACK & KI-EXPERTISE",
     techIntro: "Werkzeuge und Technologien, die ich in KI, Backend, Web und DevOps einsetze – abgestimmt auf meine Projekte und kontinuierliches Lernen.",
@@ -115,27 +114,27 @@ const T = {
     contactIntro: "Offen für Praktika, Kooperationen und interessante Engineering-Herausforderungen.",
     university: "Istanbul Gesundheits- und Technologieuniversität",
     projects: [
-      { title:"KI-Gesundheits-Check-System", desc:"KI-gestütztes klinisches Entscheidungsunterstützungssystem für Frühdiagnose und personalisierte Patientenanalyse.", detail:"Analysiert Patientensymptome und medizinische Daten.", impact:"Verbesserte Frühdiagnosegenauigkeit durch KI-gesteuerte Analyse." },
+      { title:"KI-Gesundheits-Check-System", desc:"KI-gestütztes Entscheidungsunterstützungssystem für Frühdiagnose und personalisierte Patientenanalyse.", detail:"Analysiert Patientensymptome und medizinische Daten.", impact:"Verbesserte Frühdiagnosegenauigkeit." },
       { title:"Navicane", desc:"Intelligenter Navigationsassistent für sehbehinderte Personen mit Echtzeit-KI-Führung.", detail:"Assistives Navigationssystem mit Echtzeit-Hinderniserkennung.", impact:"Verbesserte Navigationssicherheit für Sehbehinderte." },
-      { title:"Katastrophenhilfe-Plattform", desc:"Intelligente Plattform zur Koordinierung von Nothilfe und Ressourcenverteilung.", detail:"Plattform zur Verwaltung von Hilfeanfragen und Spenden.", impact:"Optimierte Hilfsverteilung in Notfallszenarien." },
-      { title:"KI-Konfigurations-Orchestrator", desc:"KI-gesteuertes Automatisierungssystem für komplexe Konfigurationen.", detail:"Automatisiert Systemkonfigurationen via natürlicher Sprache.", impact:"Reduzierte manuelle Konfigurationszeit durch KI." },
+      { title:"Katastrophenhilfe-Plattform", desc:"Intelligente Plattform zur Koordinierung von Nothilfe und Ressourcenverteilung.", detail:"Plattform zur Verwaltung von Hilfeanfragen.", impact:"Optimierte Hilfsverteilung in Notfallszenarien." },
+      { title:"KI-Konfigurations-Orchestrator", desc:"KI-gesteuertes Automatisierungssystem für komplexe Konfigurationen.", detail:"Automatisiert Systemkonfigurationen via natürlicher Sprache.", impact:"Reduzierte manuelle Konfigurationszeit." },
       { title:"Energieanalyse von Sortieralgorithmen", desc:"Analytisches Framework zur Untersuchung von Effizienz und Energieverbrauch.", detail:"Analysiert Sortieralgorithmen nach Zeit- und Energieverbrauch.", impact:"Identifizierte energieeffiziente Algorithmen." },
     ],
     rd: [
       { title:"Autonome & intelligente Systeme", desc:"KI-gesteuerte Systeme mit Echtzeit-Wahrnehmung und adaptivem Verhalten." },
       { title:"KI & Entscheidungssysteme", desc:"Datengesteuerte Entscheidungsunterstützungssysteme für kritische Anwendungen." },
-      { title:"Eingebettete & Echtzeitsysteme", desc:"Eingebettete Systeme und hardware-integrierte KI-Lösungen für Hochleistungsumgebungen." },
+      { title:"Eingebettete & Echtzeitsysteme", desc:"Eingebettete Systeme und hardware-integrierte KI-Lösungen." },
     ],
     certs: [
-      { short:"Grundlagen der Raketentechnik", institution:"Türkisches Präsidium für Verteidigungsindustrie — Akademie", takeaway:"Absolvierte das e-Book-Training Grundlagen der Raketentechnik." },
-      { short:"KI-Bewusstseinsschulung", institution:"Türkisches Präsidium für Verteidigungsindustrie — Akademie", takeaway:"Grundlegende KI-Konzepte erlernt und Kompetenzen gestärkt." },
-      { short:"Karriere & Kompetenz-Treffen", institution:"Verteidigungsindustrie-Akademie — Nationale Kompetenzinitiative", takeaway:"Aktuelle Perspektiven im Ökosystem der Verteidigungsindustrie gewonnen." },
-      { short:"GenAI — Technologie-Serie", institution:"Garanti BBVA Genç — Neue Generation Karriereschule", takeaway:"Alle Module der Trainingsreihe vom 17.–19. Dezember abgeschlossen." },
-      { short:"Technologie-Serie-GenAI", institution:"Garanti BBVA Genç — Neue Generation Karriereschule", takeaway:"GenAI-Kernkompetenzen und aktuelle Anwendungsperspektiven entwickelt." },
-      { short:"Grundlagen des maschinellen Lernens", institution:"Garanti BBVA Genç — Neue Generation Karriereschule", takeaway:"ML-Grundprinzipien gefestigt und KI-Projektfundament gestärkt." },
+      { short:"Grundlagen Raketentechnik", institution:"Türkisches Präsidium für Verteidigungsindustrie", takeaway:"Absolvierte das e-Book-Training Grundlagen der Raketentechnik." },
+      { short:"KI-Bewusstseinsschulung", institution:"Türkisches Präsidium für Verteidigungsindustrie", takeaway:"Grundlegende KI-Konzepte erlernt." },
+      { short:"Karriere & Kompetenz", institution:"Verteidigungsindustrie-Akademie", takeaway:"Aktuelle Perspektiven im Verteidigungsindustrie-Ökosystem gewonnen." },
+      { short:"GenAI — Technologie-Serie", institution:"Garanti BBVA Genç — Karriereschule", takeaway:"Alle Module der Trainingsreihe abgeschlossen." },
+      { short:"Technologie-Serie-GenAI", institution:"Garanti BBVA Genç — Karriereschule", takeaway:"GenAI-Kernkompetenzen entwickelt." },
+      { short:"Grundlagen ML", institution:"Garanti BBVA Genç — Karriereschule", takeaway:"ML-Grundprinzipien gefestigt." },
       { short:"Think Tech", institution:"Coderspace", takeaway:"Think-Tech-Event am 11.–12. Dezember 2025 besucht." },
       { short:"Women in Tech", institution:"Coderspace", takeaway:"Women in Tech Event am 10.–11. März 2026 besucht." },
-      { short:"CODE GENIUS", institution:"TalentCoders.co — CODE GENIUS", takeaway:"CODE GENIUS besucht; Zertifikat TC55189FC22." },
+      { short:"CODE GENIUS", institution:"TalentCoders.co", takeaway:"CODE GENIUS besucht; Zertifikat TC55189FC22." },
     ],
   },
 };
@@ -148,7 +147,7 @@ const PROJ_TECHS  = [
   ["Python","Docker","LLM","Microservices","API"],
   ["Python","Algorithm Analysis","Data Analysis","Performance"],
 ];
-const PROJ_TAGS   = [
+const PROJ_TAGS = [
   ["AI","ML","Healthcare"],["AI","Accessibility","Healthcare"],
   ["Web","Backend","Crisis Mgmt"],["AI","Automation","DevOps"],["Algorithms","Research","Energy"],
 ];
@@ -171,18 +170,32 @@ const CERT_IMGS = [
   "/certificates/womenInTech.jpeg",
   "/certificates/CodeGenius.jpg",
 ];
+
 const TECH_STACK = [
-  {n:"Python",c:"AI / Backend",I:SiPython},{n:"TensorFlow",c:"ML / Deep Learning",I:SiTensorflow},
-  {n:"Scikit-learn",c:"ML / Classical",I:SiScikitlearn},{n:"LangChain",c:"LLM / Orchestration",I:SiLangchain},
-  {n:"LLM / GenAI",c:"AI Applications",I:FaRobot},{n:"OpenCV",c:"Computer Vision",I:FaEye},
-  {n:"SQL",c:"Data & Databases",I:FaDatabase},{n:"FastAPI",c:"Backend / API",I:SiFastapi},
-  {n:"REST API",c:"Integration",I:FaPlug},{n:"SQLite",c:"Database",I:SiSqlite},
-  {n:"MySQL",c:"Database",I:SiMysql},{n:"PHP",c:"Web / Backend",I:SiPhp},
-  {n:"Docker",c:"DevOps",I:SiDocker},{n:"Microservices",c:"Architecture",I:FaServer},
-  {n:"Git",c:"Version control",I:SiGit},{n:"GitHub",c:"Collaboration",I:SiGithub},
-  {n:"JavaScript",c:"Frontend",I:SiJavascript},{n:"React",c:"Frontend",I:SiReact},
-  {n:"HTML",c:"Frontend",I:SiHtml5},{n:"CSS",c:"Frontend",I:SiCss},
-  {n:"C++",c:"Performance",I:SiCplusplus},
+  {n:"Python",        c:"AI / Backend",          I:SiPython},
+  {n:"TensorFlow",    c:"ML / Deep Learning",    I:SiTensorflow},
+  {n:"Scikit-learn",  c:"ML / Classical",        I:SiScikitlearn},
+  {n:"LangChain",     c:"LLM / Orchestration",   I:SiLangchain},
+  {n:"LLM / GenAI",   c:"AI Applications",       I:FaRobot},
+  {n:"OpenCV",        c:"Computer Vision",       I:FaEye},
+  {n:"SQL",           c:"Data & Databases",      I:FaDatabase},
+  {n:"FastAPI",       c:"Backend / API",         I:SiFastapi},
+  {n:"REST API",      c:"Integration",           I:FaPlug},
+  {n:"SQLite",        c:"Database",              I:SiSqlite},
+  {n:"MySQL",         c:"Database",              I:SiMysql},
+  {n:"PostgreSQL",    c:"Database",              I:SiPostgresql},
+  {n:"PHP",           c:"Web / Backend",         I:SiPhp},
+  {n:"Docker",        c:"DevOps",                I:SiDocker},
+  {n:"Linux",         c:"Systems",               I:SiLinux},
+  {n:"Microservices", c:"Architecture",          I:FaServer},
+  {n:"Git",           c:"Version control",       I:SiGit},
+  {n:"GitHub",        c:"Collaboration",         I:SiGithub},
+  {n:"JavaScript",    c:"Frontend",              I:SiJavascript},
+  {n:"TypeScript",    c:"Frontend",              I:SiTypescript},
+  {n:"React",         c:"Frontend",              I:SiReact},
+  {n:"HTML",          c:"Frontend",              I:SiHtml5},
+  {n:"CSS",           c:"Frontend",              I:SiCss},
+  {n:"C++",           c:"Performance",           I:SiCplusplus},
 ];
 
 export default function App() {
@@ -223,9 +236,7 @@ export default function App() {
     { label: t.nav.contact,  ref: refs.contact },
   ];
 
-  const projects = t.projects.map((p, i) => ({
-    ...p, icon: PROJ_ICONS[i], technologies: PROJ_TECHS[i], tags: PROJ_TAGS[i], github: PROJ_GH[i],
-  }));
+  const projects = t.projects.map((p, i) => ({ ...p, icon:PROJ_ICONS[i], technologies:PROJ_TECHS[i], tags:PROJ_TAGS[i], github:PROJ_GH[i] }));
   const rdItems  = t.rd.map((r, i) => ({ ...r, icon: RD_ICONS[i] }));
   const certs    = t.certs.map((c, i) => ({ ...c, image: CERT_IMGS[i] }));
 
@@ -248,11 +259,8 @@ export default function App() {
               <button key={l} className={`lang-btn${lang===l?" active":""}`} onClick={() => setLang(l)}>{l}</button>
             ))}
           </div>
-          {/* hamburger */}
           <button className="hamburger" onClick={() => setMenuOpen(o => !o)} aria-label="menu">
-            {menuOpen
-              ? <IoClose size={22} color="#d1d5db"/>
-              : <GiHamburgerMenu size={20} color="#d1d5db"/>}
+            {menuOpen ? <IoClose size={22} color="#d1d5db"/> : <GiHamburgerMenu size={20} color="#d1d5db"/>}
           </button>
         </div>
       </nav>
@@ -264,10 +272,10 @@ export default function App() {
         ))}
       </div>
 
-      {/* ── HERO ── */}
-      <div ref={refs.home} style={{ minHeight:"80vh", display:"flex", alignItems:"center", justifyContent:"center", paddingTop:"80px" }}>
-        <div style={{ textAlign:"center", maxWidth:"680px", padding:"0 20px" }}>
-          <img src="/profile.jpg" alt="profile" style={{ width:"160px", height:"160px", objectFit:"cover", borderRadius:"50%", margin:"0 auto", border:"4px solid #22d3ee", boxShadow:"0 0 25px rgba(34,211,238,0.35)", display:"block" }}/>
+      {/* ── HERO — full viewport ── */}
+      <div ref={refs.home} style={{ height:"100vh", display:"flex", alignItems:"center", justifyContent:"center" }}>
+        <div style={{ textAlign:"center", maxWidth:"700px", padding:"0 24px" }}>
+          <img src="/profile.jpg" alt="profile" style={{ width:"170px", height:"170px", objectFit:"cover", borderRadius:"50%", margin:"0 auto", border:"4px solid #22d3ee", boxShadow:"0 0 28px rgba(34,211,238,0.35)", display:"block" }}/>
           <h1 className="hero-title">Leyla Erdemir</h1>
           <p className="hero-subtitle">{t.hero.sub}</p>
           <p className="hero-desc">{t.hero.desc}</p>
@@ -275,15 +283,15 @@ export default function App() {
       </div>
 
       {/* ── TECH STACK ── */}
-      <div ref={refs.tech} style={{ paddingTop:"60px", paddingBottom:"40px", textAlign:"center", maxWidth:"1100px", margin:"0 auto", padding:"60px 20px 40px" }}>
+      <div ref={refs.tech} style={{ padding:"80px 24px 60px", maxWidth:"1100px", margin:"0 auto", textAlign:"center" }}>
         <h2 className="section-title">{t.techTitle}</h2>
-        <p style={{ color:"#9ca3af", fontSize:"16px", lineHeight:"1.65", maxWidth:"680px", margin:"0 auto 36px" }}>{t.techIntro}</p>
-        <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fill, minmax(120px, 1fr))", gap:"14px" }}>
+        <p style={{ color:"#9ca3af", fontSize:"16px", lineHeight:"1.65", maxWidth:"700px", margin:"0 auto 40px" }}>{t.techIntro}</p>
+        <div className="tech-grid">
           {TECH_STACK.map(({ n, c, I }) => (
-            <div key={n} style={{ background:"#0b1a2a", borderRadius:"14px", border:"1px solid #1f2937", padding:"16px 10px", display:"flex", flexDirection:"column", alignItems:"center", gap:"8px" }}>
-              <I size={30} color="#22d3ee"/>
-              <span style={{ fontSize:"15px", fontWeight:"700", color:"#e5e7eb", textAlign:"center" }}>{n}</span>
-              <span style={{ fontSize:"12px", color:"#64748b", textAlign:"center" }}>{c}</span>
+            <div key={n} style={{ background:"#0b1a2a", borderRadius:"14px", border:"1px solid #1f2937", padding:"18px 10px 14px", display:"flex", flexDirection:"column", alignItems:"center", gap:"8px" }}>
+              <I size={32} color="#22d3ee"/>
+              <span style={{ fontSize:"14px", fontWeight:"700", color:"#e5e7eb", textAlign:"center", lineHeight:"1.2" }}>{n}</span>
+              <span style={{ fontSize:"11px", color:"#64748b", textAlign:"center" }}>{c}</span>
             </div>
           ))}
         </div>
@@ -292,23 +300,23 @@ export default function App() {
       {/* ── PROJECTS ── */}
       <div ref={refs.projects} style={{ paddingTop:"40px", textAlign:"center" }}>
         <h2 className="section-title">{t.projectsTitle}</h2>
-        <div style={{ maxWidth:"1060px", margin:"0 auto", display:"flex", flexDirection:"column", gap:"24px", padding:"0 16px", opacity: visible?1:0, transform: visible?"translateY(0)":"translateY(40px)", transition:"all 0.8s ease" }}>
+        <div style={{ maxWidth:"1060px", margin:"0 auto", display:"flex", flexDirection:"column", gap:"24px", padding:"0 16px", opacity:visible?1:0, transform:visible?"translateY(0)":"translateY(40px)", transition:"all 0.8s ease" }}>
           <div className="cards-row">
-            {projects.slice(0,3).map((p, i) => <Card key={i} p={p} onOpen={setSelProj} label={t.viewDetails}/>)}
+            {projects.slice(0,3).map((p,i) => <Card key={i} p={p} onOpen={setSelProj} label={t.viewDetails}/>)}
           </div>
           <div className="cards-row">
-            {projects.slice(3,5).map((p, i) => <Card key={i+3} p={p} onOpen={setSelProj} label={t.viewDetails}/>)}
+            {projects.slice(3,5).map((p,i) => <Card key={i+3} p={p} onOpen={setSelProj} label={t.viewDetails}/>)}
           </div>
 
           {/* R&D */}
           <div ref={refs.rd} style={{ paddingTop:"60px", textAlign:"center" }}>
             <h2 className="section-title">{t.rdTitle}</h2>
-            <p style={{ color:"#9ca3af", marginBottom:"32px", fontSize:"14px", padding:"0 16px" }}>{t.rdIntro}</p>
+            <p style={{ color:"#9ca3af", marginBottom:"32px", fontSize:"16px", padding:"0 16px" }}>{t.rdIntro}</p>
             <div className="cards-row">
-              {rdItems.map((item, i) => (
+              {rdItems.map((item,i) => (
                 <div key={i} style={S.card}>
                   <div style={S.cardBody}>
-                    <div style={{ marginBottom:"10px", fontSize:"26px" }}>{item.icon}</div>
+                    <div style={{ marginBottom:"10px", fontSize:"28px" }}>{item.icon}</div>
                     <h3 style={S.cardTitle}>{item.title}</h3>
                     <p style={S.cardText}>{item.desc}</p>
                   </div>
@@ -321,23 +329,23 @@ export default function App() {
       </div>
 
       {/* ── CERTIFICATES ── */}
-      <div ref={refs.certs} style={{ paddingTop:"80px", paddingBottom:"60px", textAlign:"center", maxWidth:"1100px", margin:"0 auto", padding:"80px 20px 60px" }}>
+      <div ref={refs.certs} style={{ padding:"80px 24px 60px", maxWidth:"1100px", margin:"0 auto", textAlign:"center" }}>
         <h2 className="section-title">{t.certsTitle}</h2>
-        <p style={{ color:"#9ca3af", fontSize:"16px", lineHeight:"1.6", maxWidth:"600px", margin:"0 auto 32px" }}>{t.certsIntro}</p>
-        <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fill, minmax(150px, 1fr))", gap:"14px" }}>
-          {certs.map((cert, i) => (
+        <p style={{ color:"#9ca3af", fontSize:"15px", lineHeight:"1.6", maxWidth:"600px", margin:"0 auto 32px" }}>{t.certsIntro}</p>
+        <div className="cert-grid">
+          {certs.map((cert,i) => (
             <button key={i} type="button"
               style={{ position:"relative", aspectRatio:"1", borderRadius:"12px", overflow:"hidden", border:"1px solid #1f2937", padding:0, cursor:"pointer", background:"#0b1a2a", fontFamily:"inherit" }}
               onClick={() => setSelCert(cert)}
-              onMouseEnter={(e) => { setHovCert(i); e.currentTarget.style.transform="scale(1.05)"; e.currentTarget.style.boxShadow="0 0 28px rgba(34,211,238,0.45)"; e.currentTarget.style.borderColor="rgba(34,211,238,0.5)"; }}
+              onMouseEnter={(e) => { setHovCert(i); e.currentTarget.style.transform="scale(1.05)"; e.currentTarget.style.boxShadow="0 0 24px rgba(34,211,238,0.4)"; e.currentTarget.style.borderColor="rgba(34,211,238,0.5)"; }}
               onMouseLeave={(e) => { setHovCert(null); e.currentTarget.style.transform="scale(1)"; e.currentTarget.style.boxShadow="none"; e.currentTarget.style.borderColor="#1f2937"; }}
             >
               <img src={cert.image} alt="" style={{ width:"100%", height:"100%", objectFit:"cover", display:"block" }}/>
-              <div style={{ position:"absolute", left:0, right:0, bottom:0, padding:"22px 8px 8px", background:"linear-gradient(to top, rgba(3,7,18,0.92) 0%, transparent 100%)", pointerEvents:"none" }}>
-                <span style={{ color:"#f3f4f6", fontSize:"11px", fontWeight:"600", display:"block", textAlign:"center" }}>{cert.short}</span>
+              <div style={{ position:"absolute", left:0, right:0, bottom:0, padding:"20px 6px 6px", background:"linear-gradient(to top, rgba(3,7,18,0.92) 0%, transparent 100%)", pointerEvents:"none" }}>
+                <span style={{ color:"#f3f4f6", fontSize:"10px", fontWeight:"600", display:"block", textAlign:"center" }}>{cert.short}</span>
               </div>
-              <div style={{ position:"absolute", inset:0, display:"flex", alignItems:"center", justifyContent:"center", background:"rgba(3,7,18,0.4)", opacity: hovCert===i?1:0, transition:"opacity 0.2s", pointerEvents:"none" }}>
-                <FaSearchPlus size={28} color="#22d3ee"/>
+              <div style={{ position:"absolute", inset:0, display:"flex", alignItems:"center", justifyContent:"center", background:"rgba(3,7,18,0.4)", opacity:hovCert===i?1:0, transition:"opacity 0.2s", pointerEvents:"none" }}>
+                <FaSearchPlus size={24} color="#22d3ee"/>
               </div>
             </button>
           ))}
@@ -347,11 +355,11 @@ export default function App() {
       {/* ── CONTACT ── */}
       <div ref={refs.contact} style={{ minHeight:"80vh", display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center", textAlign:"center", padding:"40px 20px" }}>
         <h2 className="section-title">{t.contactTitle}</h2>
-        <p style={{ color:"#9ca3af", fontSize:"16px", marginBottom:"20px" }}>{t.contactIntro}</p>
+        <p style={{ color:"#9ca3af", fontSize:"17px", marginBottom:"20px" }}>{t.contactIntro}</p>
         <div style={{ display:"flex", flexDirection:"column", gap:"8px", marginBottom:"24px" }}>
           {[
-            { href:"mailto:dogaleyla9@hotmail.com",       label:"dogaleyla9@hotmail.com" },
-            { href:"mailto:leyla.erdemir@istun.edu.tr",   label:"leyla.erdemir@istun.edu.tr" },
+            { href:"mailto:dogaleyla9@hotmail.com",     label:"dogaleyla9@hotmail.com" },
+            { href:"mailto:leyla.erdemir@istun.edu.tr", label:"leyla.erdemir@istun.edu.tr" },
           ].map(({ href, label }) => (
             <a key={label} href={href} style={{ color:"#9ca3af", textDecoration:"none", fontSize:"16px", display:"flex", alignItems:"center", justifyContent:"center", gap:"8px", transition:"color 0.2s" }}
               onMouseEnter={e => e.currentTarget.style.color="#22d3ee"}
@@ -363,9 +371,9 @@ export default function App() {
         </div>
         <div className="contact-buttons-wrap">
           {[
-            { label:"GitHub",   href:"https://github.com/leylaerdemir",                         icon:<FaGithub size={17}/> },
-            { label:"Kaggle",   href:"https://www.kaggle.com/leylaerdemir",                     icon:<SiKaggle size={17}/> },
-            { label:"LinkedIn", href:"https://www.linkedin.com/in/leyla-erdemir-a37082394/",    icon:<FaLinkedin size={17}/> },
+            { label:"GitHub",   href:"https://github.com/leylaerdemir",                      icon:<FaGithub size={17}/> },
+            { label:"Kaggle",   href:"https://www.kaggle.com/leylaerdemir",                  icon:<SiKaggle size={17}/> },
+            { label:"LinkedIn", href:"https://www.linkedin.com/in/leyla-erdemir-a37082394/", icon:<FaLinkedin size={17}/> },
           ].map(({ label, href, icon }) => (
             <a key={label} href={href} target="_blank" rel="noreferrer" className="contact-btn">{icon}{label}</a>
           ))}
@@ -378,21 +386,21 @@ export default function App() {
           <div style={S.modal} onClick={e => e.stopPropagation()}>
             <h2 style={{ fontSize:"22px", fontWeight:"700", marginBottom:"12px" }}>{selProj.title}</h2>
             <div style={{ display:"flex", gap:"8px", flexWrap:"wrap", marginBottom:"14px" }}>
-              {selProj.technologies?.map((tech, i) => (
+              {selProj.technologies?.map((tech,i) => (
                 <span key={i} style={{ padding:"5px 12px", border:"1px solid #22d3ee", borderRadius:"999px", fontSize:"12px", color:"#22d3ee" }}>{tech}</span>
               ))}
             </div>
             <p style={{ color:"#9ca3af", lineHeight:"1.6", fontSize:"15px" }}>{selProj.detail}</p>
-            <p style={{ color:"#22d3ee", marginTop:"10px", fontWeight:"500", fontSize:"14px" }}>{selProj.impact}</p>
+            <p style={{ color:"#22d3ee", marginTop:"10px", fontWeight:"500", fontSize:"15px" }}>{selProj.impact}</p>
             <div style={{ display:"flex", gap:"8px", flexWrap:"wrap", marginTop:"14px" }}>
-              {selProj.tags?.map((tag, i) => (
+              {selProj.tags?.map((tag,i) => (
                 <span key={i} style={{ background:"rgba(34,211,238,0.1)", color:"#22d3ee", padding:"5px 10px", borderRadius:"999px", fontSize:"12px" }}>#{tag}</span>
               ))}
             </div>
             <div style={{ display:"flex", gap:"12px", marginTop:"20px", flexWrap:"wrap" }}>
-              <button style={{ padding:"10px 20px", borderRadius:"12px", border:"none", background:"linear-gradient(135deg,#22d3ee,#06b6d4)", color:"#030712", fontWeight:"600", fontSize:"13px", cursor:"pointer" }}
+              <button style={{ padding:"10px 20px", borderRadius:"12px", border:"none", background:"linear-gradient(135deg,#22d3ee,#06b6d4)", color:"#030712", fontWeight:"600", fontSize:"14px", cursor:"pointer" }}
                 onClick={() => window.open(selProj.github,"_blank")}>{t.viewDemo}</button>
-              <button style={{ background:"transparent", border:"1px solid #22d3ee", padding:"10px 20px", borderRadius:"12px", color:"#22d3ee", cursor:"pointer", fontSize:"13px", fontWeight:"600" }}
+              <button style={{ background:"transparent", border:"1px solid #22d3ee", padding:"10px 20px", borderRadius:"12px", color:"#22d3ee", cursor:"pointer", fontSize:"14px", fontWeight:"600" }}
                 onClick={() => setSelProj(null)}>{t.close}</button>
             </div>
           </div>
@@ -408,8 +416,8 @@ export default function App() {
             </div>
             <p style={{ fontSize:"10px", letterSpacing:"0.1em", textTransform:"uppercase", color:"#22d3ee", fontWeight:"600", margin:0 }}>{t.issuedBy}</p>
             <h2 style={{ margin:"6px 0 12px", fontSize:"17px", fontWeight:"700", lineHeight:"1.3", color:"#f9fafb" }}>{selCert.institution}</h2>
-            <p style={{ color:"#9ca3af", fontSize:"13px", lineHeight:"1.65" }}>{selCert.takeaway}</p>
-            <button style={{ background:"transparent", border:"1px solid #22d3ee", padding:"10px 20px", borderRadius:"12px", color:"#22d3ee", cursor:"pointer", fontSize:"13px", fontWeight:"600", marginTop:"18px", width:"100%" }}
+            <p style={{ color:"#9ca3af", fontSize:"14px", lineHeight:"1.65" }}>{selCert.takeaway}</p>
+            <button style={{ background:"transparent", border:"1px solid #22d3ee", padding:"10px 20px", borderRadius:"12px", color:"#22d3ee", cursor:"pointer", fontSize:"14px", fontWeight:"600", marginTop:"18px", width:"100%" }}
               onClick={() => setSelCert(null)}>{t.close}</button>
           </div>
         </div>
@@ -436,9 +444,9 @@ function Card({ p, onOpen, label }) {
 const S = {
   card: { background:"#0b1a2a", borderRadius:"18px", padding:"26px 20px", width:"300px", minHeight:"320px", display:"flex", flexDirection:"column", justifyContent:"space-between", alignItems:"center", transition:"all 0.3s ease", cursor:"pointer" },
   cardBody: { display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"center", flex:1, width:"100%" },
-  cardTitle: { fontSize:"19px", fontWeight:"700", color:"#e5e7eb", textAlign:"center", margin:"8px 0", lineHeight:"1.3", minHeight:"52px", display:"flex", alignItems:"center", justifyContent:"center" },
+  cardTitle: { fontSize:"20px", fontWeight:"700", color:"#e5e7eb", textAlign:"center", margin:"8px 0", lineHeight:"1.3", minHeight:"52px", display:"flex", alignItems:"center", justifyContent:"center" },
   cardText: { fontSize:"15px", color:"#9ca3af", textAlign:"center", lineHeight:"1.6", marginTop:"8px" },
-  btn: { marginTop:"16px", color:"#22d3ee", cursor:"pointer", fontSize:"13px" },
+  btn: { marginTop:"16px", color:"#22d3ee", cursor:"pointer", fontSize:"14px" },
   overlay: { position:"fixed", top:0, left:0, width:"100%", height:"100%", background:"rgba(0,0,0,0.75)", display:"flex", justifyContent:"center", alignItems:"center", zIndex:2000, padding:"16px" },
   modal: { background:"#0a0f1c", padding:"28px", borderRadius:"18px", border:"1px solid #1f2937", width:"100%", maxWidth:"500px", maxHeight:"90vh", overflowY:"auto", boxShadow:"0 0 40px rgba(34,211,238,0.2)" },
 };

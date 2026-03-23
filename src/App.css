@@ -11,7 +11,7 @@
 }
 .nav-menu { display: flex; gap: 24px; align-items: center; flex-wrap: nowrap; }
 .nav-link {
-  color: #d1d5db; font-size: 14px; cursor: pointer;
+  color: #d1d5db; font-size: 15px; cursor: pointer;
   transition: all 0.3s ease; text-decoration: none; white-space: nowrap;
 }
 .nav-link:hover { color: #22d3ee; text-shadow: 0 0 8px #22d3ee; }
@@ -24,7 +24,7 @@
 .lang-container { display: flex; gap: 3px; margin-left: 4px; }
 .lang-btn {
   color: #9ca3af; padding: 5px 8px; background: transparent; border: none;
-  cursor: pointer; font-size: 12px; border-radius: 7px;
+  cursor: pointer; font-size: 13px; border-radius: 7px;
   transition: all 0.2s ease; font-family: inherit; white-space: nowrap;
 }
 .lang-btn:hover { color: #e5e7eb; }
@@ -51,9 +51,15 @@
 .mobile-menu a:hover { color: #22d3ee; }
 
 /* ─── HERO ─── */
-.hero-title  { font-size: 52px; margin-top: 20px; }
-.hero-subtitle { color: #22d3ee; font-size: 20px; margin-top: 6px; }
-.hero-desc { color: #9ca3af; margin-top: 10px; line-height: 1.6; font-size: 15px; }
+.hero-title  { font-size: 56px; margin-top: 20px; font-weight: 700; }
+.hero-subtitle { color: #22d3ee; font-size: 22px; margin-top: 8px; }
+.hero-desc { color: #9ca3af; margin-top: 12px; line-height: 1.65; font-size: 16px; }
+
+/* ─── SECTION TITLE ─── */
+.section-title {
+  font-size: 30px; letter-spacing: 3px; color: #22d3ee;
+  margin-bottom: 32px; text-align: center;
+}
 
 /* ─── CARDS ROW ─── */
 .cards-row {
@@ -61,16 +67,24 @@
   gap: 20px; width: 100%; flex-wrap: wrap;
 }
 
-/* ─── SECTION TITLES ─── */
-.section-title {
-  font-size: 28px; letter-spacing: 3px; color: #22d3ee; margin-bottom: 32px;
-  text-align: center;
+/* ─── TECH GRID ─── */
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 14px;
+}
+
+/* ─── CERT GRID ─── */
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 14px;
 }
 
 /* ─── CONTACT BUTTONS ─── */
 .contact-btn {
   padding: 14px 30px; border-radius: 14px; border: 1px solid #1f2937;
-  background: #0b1a2a; color: #e5e7eb; font-size: 15px; cursor: pointer;
+  background: #0b1a2a; color: #e5e7eb; font-size: 16px; cursor: pointer;
   text-decoration: none; transition: all 0.3s ease;
   display: flex; align-items: center; gap: 10px; font-family: inherit;
 }
@@ -84,14 +98,14 @@
   .nav { padding: 14px 24px; }
   .nav-menu { gap: 16px; }
   .nav-link { font-size: 13px; }
-  .hero-title { font-size: 40px; }
+  .hero-title { font-size: 44px; }
+  .section-title { font-size: 24px; }
 }
 
 /* ══════════════════════════════
    MOBILE  ≤ 768px
 ══════════════════════════════ */
 @media (max-width: 768px) {
-  /* Nav: hide links, show hamburger */
   .nav { padding: 12px 16px; }
   .nav-menu { display: none; }
   .hamburger { display: flex; }
@@ -100,18 +114,26 @@
   .lang-btn { padding: 4px 6px; font-size: 11px; }
   .lang-container { margin-left: 2px; }
 
-  /* Hero */
   .hero-title { font-size: 30px; }
-  .hero-subtitle { font-size: 15px; }
-  .hero-desc { font-size: 13px; padding: 0 8px; }
+  .hero-subtitle { font-size: 16px; }
+  .hero-desc { font-size: 14px; padding: 0 8px; }
 
-  /* Cards: single column, contained width */
+  .section-title { font-size: 18px; letter-spacing: 2px; margin-bottom: 20px; }
+
+  /* Tech grid: 3 columns on mobile */
+  .tech-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+
+  /* Cert grid: 3 columns on mobile */
+  .cert-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+
   .cards-row { flex-direction: column; align-items: center; }
 
-  /* Section title smaller */
-  .section-title { font-size: 20px; letter-spacing: 2px; }
-
-  /* Contact buttons: stack */
   .contact-buttons-wrap { flex-direction: column; align-items: center; gap: 10px; }
   .contact-btn { width: 100%; max-width: 300px; justify-content: center; padding: 13px 20px; font-size: 14px; }
 }
@@ -122,4 +144,6 @@
 @media (max-width: 480px) {
   .hero-title { font-size: 26px; }
   .hero-subtitle { font-size: 14px; }
+  .tech-grid { grid-template-columns: repeat(3, 1fr); gap: 6px; }
+  .cert-grid { grid-template-columns: repeat(3, 1fr); gap: 6px; }
 }
