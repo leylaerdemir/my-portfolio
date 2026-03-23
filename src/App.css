@@ -118,7 +118,7 @@
   .section-title { font-size: 18px; letter-spacing: 2px; margin-bottom: 20px; }
 
   /* Tech grid: 3 columns â€” fits screen */
-  .tech-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .tech-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; padding: 0 12px; }
 
   /* Cert grid: 3 columns */
   .cert-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
