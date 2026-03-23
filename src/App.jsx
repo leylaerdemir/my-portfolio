@@ -173,6 +173,7 @@ const CERT_IMGS = [
 ];
 const TECH_STACK = [
   {n:"Python",c:"AI / Backend",I:SiPython},{n:"TensorFlow",c:"ML / Deep Learning",I:SiTensorflow},
+  {n:"Scikit-learn",c:"ML / Classical",I:SiScikitlearn},{n:"LangChain",c:"LLM / Orchestration",I:SiLangchain},
   {n:"LLM / GenAI",c:"AI Applications",I:FaRobot},{n:"OpenCV",c:"Computer Vision",I:FaEye},
   {n:"SQL",c:"Data & Databases",I:FaDatabase},{n:"FastAPI",c:"Backend / API",I:SiFastapi},
   {n:"REST API",c:"Integration",I:FaPlug},{n:"SQLite",c:"Database",I:SiSqlite},
