@@ -277,7 +277,7 @@ export default function App() {
       {/* ── TECH STACK ── */}
       <div ref={refs.tech} style={{ paddingTop:"60px", paddingBottom:"40px", textAlign:"center", maxWidth:"1100px", margin:"0 auto", padding:"60px 20px 40px" }}>
         <h2 className="section-title">{t.techTitle}</h2>
-        <p style={{ color:"#9ca3af", fontSize:"14px", lineHeight:"1.65", maxWidth:"680px", margin:"0 auto 36px" }}>{t.techIntro}</p>
+        <p style={{ color:"#9ca3af", fontSize:"16px", lineHeight:"1.65", maxWidth:"680px", margin:"0 auto 36px" }}>{t.techIntro}</p>
         <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fill, minmax(120px, 1fr))", gap:"14px" }}>
           {TECH_STACK.map(({ n, c, I }) => (
             <div key={n} style={{ background:"#0b1a2a", borderRadius:"14px", border:"1px solid #1f2937", padding:"16px 10px", display:"flex", flexDirection:"column", alignItems:"center", gap:"8px" }}>
@@ -323,7 +323,7 @@ export default function App() {
       {/* ── CERTIFICATES ── */}
       <div ref={refs.certs} style={{ paddingTop:"80px", paddingBottom:"60px", textAlign:"center", maxWidth:"1100px", margin:"0 auto", padding:"80px 20px 60px" }}>
         <h2 className="section-title">{t.certsTitle}</h2>
-        <p style={{ color:"#9ca3af", fontSize:"14px", lineHeight:"1.6", maxWidth:"600px", margin:"0 auto 32px" }}>{t.certsIntro}</p>
+        <p style={{ color:"#9ca3af", fontSize:"16px", lineHeight:"1.6", maxWidth:"600px", margin:"0 auto 32px" }}>{t.certsIntro}</p>
         <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fill, minmax(150px, 1fr))", gap:"14px" }}>
           {certs.map((cert, i) => (
             <button key={i} type="button"
